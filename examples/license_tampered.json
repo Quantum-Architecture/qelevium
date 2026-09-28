@@ -1,0 +1,10 @@
+{
+ "protocol": "QELEVIUM-LICENSE-1",
+ "license_id": "AUT-544CAAF88E24",
+ "licensee": "demo@example.com",
+ "plan": "pro",
+ "valid_from": 1790412252,
+ "valid_until": 1803090652,
+ "grace_s": 259200,
+ "sig": "957352a918f374e908e5bf734c9737f25b76a8bf1268ac9f99bbcb259fd9c6def7293364b645c6797c46bc8a2f413b088de660dcad8bc3769c7310ef68bd3a07"
+}

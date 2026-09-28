@@ -1,0 +1,15 @@
+name: verify
+on: [push, pull_request]
+jobs:
+  licence:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install cryptography
+      - run: python -m unittest -v test_verify_license
+      # the example licence is dated 2026-09-26 and valid 31 days: the clock is pinned so the proof does not expire
+      - run: python tools/verify_license.py examples/license_example.json --vendor-key $(cat examples/vendor_public_key_DEMO.txt) --now 1790500000
+      - run: "! python tools/verify_license.py examples/license_tampered.json --vendor-key $(cat examples/vendor_public_key_DEMO.txt) --now 1790500000"
+      - run: "! python tools/verify_license.py examples/license_example.json --vendor-key $(cat examples/vendor_public_key_DEMO.txt) --now 1900000000"
