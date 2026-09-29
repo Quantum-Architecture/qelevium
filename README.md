@@ -1,6 +1,7 @@
-[![CI](https://github.com/Quantum-Architecture/qelevium/actions/workflows/verify.yml/badge.svg?branch=main)](https://github.com/Quantum-Architecture/qelevium/actions/workflows/verify.yml)
-
 # Qelevium — public verification & proofs
+
+[![verify](https://github.com/Quantum-Architecture/qelevium/actions/workflows/verify.yml/badge.svg)](https://github.com/Quantum-Architecture/qelevium/actions/workflows/verify.yml)
+
 **Your AI agents, your key, your machine.** Qelevium is a personal-agent application (subscription). This public repository does not contain the product; it contains what lets anyone **check our claims**.
 
 ## What we claim, and how you verify it
